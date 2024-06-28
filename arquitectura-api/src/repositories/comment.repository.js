@@ -6,6 +6,10 @@ class CommentRepository extends BaseRepository{
         super(Comment);
         _comment = Comment;
     }
+    
+    async getCommentsByIdea(ideaId){
+        return await _comment.find({ideaId});
+    }
 }
 
 module.exports = CommentRepository;
